@@ -3,6 +3,11 @@ name = "vibracore"
 version = "0.1.0"
 description = "Pequeno projeto, fim de semana."
 requires-python = ">=3.10"
+# A linha abaixo foi movida para fora da tabela [project]
+dependencies = [
+    "fastapi>=0.103.2",
+    "uvicorn[standard]>=0.23.2",
+]
 
 [project.optional-dependencies]
 dev = [
