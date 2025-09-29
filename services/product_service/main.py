@@ -5,7 +5,7 @@ from typing import List, Dict
 app = FastAPI(
     title="Product Service",
     description="Service for managing products",
-    version="0.1.0"
+    version="0.1.0",
 )
 
 # Um banco de dados em memória para simular nosso catálogo de produtos
@@ -15,10 +15,12 @@ products_db: List[Dict] = [
     {"id": 3, "name": "Fone de Ouvido Blast", "price": 450.50},
 ]
 
+
 @app.get("/")
 def read_root():
     """Endpoint de boas-vindas para verificar se o serviço está no ar."""
     return {"status": "Product Service is running!"}
+
 
 @app.get("/products")
 def get_products():
