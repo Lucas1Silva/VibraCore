@@ -9,11 +9,11 @@ time.sleep(10)
 
 try:
     consumer = KafkaConsumer(
-        'product_created',
-        bootstrap_servers='kafka:9092',
-        auto_offset_reset='earliest',
-        group_id='review-group',
-        value_deserializer=lambda m: json.loads(m.decode('utf-8'))
+        "product_created",
+        bootstrap_servers="kafka:9092",
+        auto_offset_reset="earliest",
+        group_id="review-group",
+        value_deserializer=lambda m: json.loads(m.decode("utf-8")),
     )
     print("Successfully connected to Kafka!")
 
